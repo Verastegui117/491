@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta hhtp-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Natural Remedies - Healthier living</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<div id = "header">
+    <div class = "container">
+        <nav>
+            <img src = "images/Title.jpg" class = "logo">
+
+            <ul>
+                <li><a href = '#'>Home</a></li>
+                <li><a href = '#'>About</a></li>
+                <li><a href = '#'>Remedies</a></li>
+                <li><a href = '#'>Contact</a></li>
+            </ul>
+        </nav>
+        <div class = "header-text">
+            <p>Traditional remedies</p>
+            <h1>Hi,  <span>welcome</span><br> to Natural remedies </h1>
+
+        </div>
+    </div>
+
+<!------------about------------------------->
+</div>
+<div id = "about">
+    <div class = "container">
+        <div class = "row">
+            <div class = "about-col-1">
+                <img src = "images/Coca_Tea.jpg">
+            </div>
+            <div class = "about-col-2">
+                <h1 class = "sub-title">About Us</h1>
+                <p>Welcome to our website! In our modern world, we're living in a time
+                    when medications are freqeuntly prescribed or taken for various health
+                    concerns, often without a comprehensive understanding of their potential
+                    risks and addictive properties. Regrettably, a significant number of
+                    individuals are unaware of the longstanding traditional remedies and 
+                    healing methods that have been employed in diverse cultures around the globe.
+
+                    This is where we come in. Our mission is to empower individuals by offering 
+                    accessible information on natural remedies for everyday issues, including 
+                    headaches, colds, stomach aches, allergies, and more. We belive that by 
+                    reconnecting with the wisdom of age-old healing practices, we can help people
+                    make informed choices about their health and well-being.
+
+                    Join us on this journey as we explore the world of natural remedies and seek 
+                    to enhance the way we approach common health concerns. Together, we can
+                    discover the incredible potential of holistic healing and take control of our
+                    health in a more mindful and sustainable manner.
+                </p>
+
+                <div class = "tab-titles">
+                    <p class = "tab-links active-link" onclick = "opentab('Goal')">Goal</p>
+                    <p class = "tab-links" onclick = "opentab('Remedies')">Remedies</p>
+                </div>
+                <div class = "tab-contents active-tab" id = "Goal">
+                    <ul>
+                        <li><span>Holistic Healing:</span><br> Discover the incredible potential of holistic healing and learn how to take control 
+                            of your health in a mindful and sustainable manner.</li>
+                        <li><span>Modern Medication Awareness:</span><br>Recognizing that medications are often prescribed without full awareness 
+                            of their risks and addictive properties.</li>
+                        <li><span>Traditional Wisdom:</span><br>Highlighting the valuable, age-old healing practices found in diverse
+                             cultures worldwide that many are unaware of.</li>
+                        <li><span>Empowerment:</span><br>Our mission is to empower individuals with accessible information on natural remedies for 
+                            everyday issues like headaches, colds, stomach aches, allergies, and more.</li>
+                        <li><span>Informed Choices:</span><br>We believe that by reconnecting with traditional healing practices, we can help people 
+                            make informed choices about their health and well-being.</li>
+                        <li><span>Join Our Journey:</span><br>Join us on this exciting journey as we explore the world of natural remedies and work 
+                            together to enhance our approach to common health concerns.</li>
+                    </ul>
+                </div>
+                <div class = "tab-contents" id = "Remedies">
+                    <ul>
+                        <li><span>Headache Relief:</span><br> Discover natural remedies and holistic approaches to alleviate and prevent headaches,
+                             providing you with effective relief and a deeper understanding of their causes.</li>
+                        <li><span>Cold Remedies:</span><br>Explore natural solutions to ease the discomfort of colds, boost your immune system, and 
+                            recover faster, all while minimizing the use of medications.</li>
+                        <li><span>Stomach Ache Solutions:</span><br>Find natural remedies to soothe and alleviate stomach aches, addressing various 
+                            underlying causes and promoting digestive health.</li>
+                        <li><span>Lethargy Solutions: </span><br>Combat fatigue and lethargy naturally with remedies and lifestyle adjustments aimed 
+                            at boosting energy levels and revitalizing your overall well-being..</li>
+                        <li><span>Many More:</span><br>We plan on bringing more natural remedies for dieffrent tyoe of ailments</li>
+                        
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+
+</body>
+</html>
