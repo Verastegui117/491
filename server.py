@@ -16,5 +16,11 @@ def get_heaadache():
 @app.route('/cold', methods=['GET'])
 def get_cold():
     return render_template("cold.html")
+
+@app.route('/stomach', methods=['GET'])
+def get_stomach():
+    return render_template("stomach.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
