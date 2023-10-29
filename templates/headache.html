@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headache Relief - Natural Remedies</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Title.jpg" class="logo">
+            <ul>
+                <li><a href='#'>Home</a></li>
+                <li><a href='#'>About</a></li>
+                <li><a href='#'>Remedies</a></li>
+                <li><a href='#'>Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Discover Natural Relief</p>
+            <h1>Welcome to <span>Headache Relief</span></h1>
+        </div>
+    </div>
+</div>
+
+<div id="headache-relief">
+    <div class="container">
+        <div class="row">
+            <div class="relief-col-1">
+                <img src="images/headache-relief.jpg">
+            </div>
+            <div class="relief-col-2">
+                <h1 class="sub-title">Natural Headache Remedies</h1>
+                <p>Headaches are a common ailment that can range from a minor nuisance to debilitating. While there are many over-the-counter medications available to treat headaches, there are also numerous natural remedies that can provide relief without the potential side effects of pharmaceuticals. Here, we will introduce you to some age-old and evidence-backed natural methods to combat headaches.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Types')">Types of Headaches</p>
+                    <p class="tab-links" onclick="opentab('NaturalMethods')">Natural Methods</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="Types">
+                    <ul>
+                        <li><span>Tension Headaches:</span> The most common form of headache, often described as a tight band around the head.</li>
+                        <li><span>Migraine:</span> A severe headache accompanied by other symptoms such as nausea, visual disturbances, and sensitivity to light or sound.</li>
+                        <li><span>Cluster Headaches:</span> Intense and often described as a burning or piercing pain, usually centered around one eye.</li>
+                        <li><span>Sinus Headaches:</span> Caused by inflammation of the sinuses and often accompanied by symptoms like nasal congestion.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="NaturalMethods">
+                    <ul>
+                        <li><span>Peppermint Oil:</span> Applying diluted peppermint oil on the temples can help increase blood flow to the area and relieve muscle contractions.</li>
+                        <li><span>Lavender Oil:</span> Inhaling the aroma of lavender essential oil may help in reducing migraine pain.</li>
+                        <li><span>Ginger Tea:</span> Consuming ginger tea may help reduce inflammation and provide headache relief.</li>
+                        <li><span>Magnesium Supplements:</span> A deficiency in magnesium can trigger headaches, especially migraines. Consuming magnesium supplements may help reduce the frequency of migraines.</li>
+                        <li><span>Stay Hydrated:</span> Dehydration can lead to headaches. Ensure you are drinking enough water throughout the day.</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(let tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
