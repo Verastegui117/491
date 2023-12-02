@@ -19,31 +19,59 @@ body{
     padding: 10px 10%;
 }
 
-nav{
+/* Navigation Bar */
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.logo{
-    width: 440px;
-
-}
-nav ul li{
-    display: inline-block;
+nav ul {
     list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    position: relative; /* For dropdown positioning */
     margin: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    position: relative
+    position: relative;
+    display: inline-block;
 }
 
-nav ul li a::after{
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #080808; /* Match dropdown background with body background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ff004f; /* Color for hover effect */
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Hover effect for links */
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -54,7 +82,7 @@ nav ul li a::after{
     transition: 0.5s;
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
 }
 .header-text{
@@ -68,7 +96,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color:aquamarine;
 }
-/*-------------------about-----------------*/
+
 #about{
     padding: 80px 0;
     color: #ababab;
@@ -80,8 +108,7 @@ nav ul li a:hover::after{
 }
 
 .about-col-1{
-    /*size of coca tea image*/
-    flex-basis: 35%;
+    flex-basis: 30%;
 }
 .about-col-1 img{
     width: 100%;

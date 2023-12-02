@@ -11,29 +11,36 @@
 <div id = "header">
     <div class =  "container">
         <nav>
-            <img src = "images/Title.jpg" class = "logo">
-
             <ul>
-                <li><a href = '#'>Home</a></li>
-                <li><a href = '#'>About</a></li>
-                <li><a href = '#'>Remedies</a></li>
-                <li><a href = '#'>Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Remedies</a>
+                    <div class="dropdown-content">
+                        <a href="/cold">Cold</a>
+                        <a href="/headache">Headache</a>
+                        <a href="/stomach">Stomach Ache</a>
+                    </div>
+                </li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Login/Sign Up</a></li>
             </ul>
         </nav>
+            </ul>
+        </nav>
+        
         <div class = "header-text">
             <p>Traditional remedies</p>
-            <h1>Hi,  <span>welcome</span><br> to Natural remedies </h1>
+            <h1>Hi,  <span>Welcome</span><br> to Natural Remedies </h1>
 
         </div>
     </div>
 
-<!------------about------------------------->
 </div>
 <div id = "about">
     <div class = "container">
         <div class = "row">
             <div class = "about-col-1">
-                <img src = "images/Coca_Tea.jpg">
+                <img src = "static/images/Coca_Tea.jpg">
             </div>
             <div class = "about-col-2">
                 <h1 class = "sub-title">About Us</h1>
