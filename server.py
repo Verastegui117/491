@@ -48,6 +48,10 @@ def is_authenticated():
     else:
         return jsonify({'authenticated': False}), 401
 
+@app.route('/contact', methods=['GET'])
+def get_contact():
+    return render_template("contact.html")
+
 
 @app.route('/headache', methods=['GET'])
 def get_heaadache():
