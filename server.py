@@ -5,16 +5,14 @@ from datetime import datetime
 from config import db_name
 import jwt
 
-def get_username_and_email_from_token(token):
+def getemail_from_token(token):
     try:
-        # Decode the token
+     
         decoded_token = jwt.decode(token, options={"verify_signature": False})
 
-        # Extract username and email
-        username = decoded_token.get('cognito:username')
         email = decoded_token.get('email')
 
-        return username, email
+        return email
 
     except jwt.DecodeError:
         # Handle invalid token
@@ -53,7 +51,7 @@ def login():
 
 @app.route('/logout')
 def logout():
-    session.pop('logged_in', None)
+    session['logged_in'] = False
     session.clear()
     return redirect(url_for('get_home')) 
 
@@ -73,7 +71,7 @@ def callback():
         if response.status_code == 200:
             tokens = response.json()
             session['id_token'] = tokens['id_token']
-            username, email = get_username_and_email_from_token(tokens['id_token'])
+            email = getemail_from_token(tokens['id_token'])
             session['email'] = email
  
             return redirect(url_for('get_home'))
@@ -137,12 +135,10 @@ def add_comment():
 
         return redirect(url_for('get_comments'))
 
-@app.route('/comments')
+@app.route('/comments', methods=['GET'])
 def get_comments():
-    # Query all comments from the database
-    comments = Comments.query.all()
 
-    # Convert the comments to a list of dictionaries to make them JSON serializable
+    comments = Comments.query.all()
     comments_list = [
         {
             'id': comment.id,
@@ -153,7 +149,6 @@ def get_comments():
         for comment in comments
     ]
 
-    # Render an HTML template with comments data
     return render_template('forum.html', comments=comments_list)
 
 
