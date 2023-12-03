@@ -18,8 +18,7 @@ body {
     display: flex;       
     justify-content: center; 
     align-items: center; 
-    text-align: center;   
-    height: 200px;        
+    text-align: center;          
 }
 
 h1 {
@@ -28,11 +27,12 @@ h1 {
 }
 
 .header-text h1 {
-    font-size: 60px;
+    font-size: 3rem;
     margin: 0; 
 }
 
 .header-text h1 span {
+    padding-right: 10px;
     color: aquamarine;
 }
 

@@ -8,18 +8,20 @@ body{
     background: #080808;
     color: #fff;
 }
+
 #header{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     background-image: url(images/Natural.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
+
 }
+
 .container{
     padding: 10px 10%;
 }
 
-/* Navigation Bar */
 nav {
     display: flex;
     align-items: center;
@@ -33,7 +35,7 @@ nav ul {
 }
 
 nav ul li {
-    position: relative; /* For dropdown positioning */
+    position: relative; 
     margin: 10px 20px;
 }
 
@@ -45,11 +47,10 @@ nav ul li a {
     display: inline-block;
 }
 
-/* Dropdown Styles */
 .dropdown-content {
     display: none;
     position: absolute;
-    background: #080808; /* Match dropdown background with body background */
+    background: #080808; 
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -63,14 +64,14 @@ nav ul li a {
 }
 
 .dropdown-content a:hover {
-    background-color: #ff004f; /* Color for hover effect */
+    background-color: #ff004f; 
 }
 
 nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Hover effect for links */
+
 nav ul li a::after {
     content: '';
     width: 0;
@@ -97,11 +98,11 @@ nav ul li a:hover::after {
     color:aquamarine;
 }
 .symptoms-container {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px; /* Rounded corners for the container */
-    max-width: 700px; /* Adjust the width as needed */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px; 
+    max-width: 700px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -113,7 +114,9 @@ nav ul li a:hover::after {
     margin-top: 80px;
     border-radius: 8px;
 }
-
+.symptoms-backdrop h2{
+    padding-bottom: .5rem;
+}
 .symptoms-backdrop {
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black backdrop */
     padding: 15px;
@@ -145,6 +148,7 @@ nav ul li a:hover::after {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 3%;
 }
 
 .about-col-1{
@@ -190,7 +194,9 @@ nav ul li a:hover::after {
 .tab-links.active-link::after{
     width: 50%;
 }
-
+#contact{
+    height: 90vh;
+}
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
@@ -201,6 +207,9 @@ nav ul li a:hover::after {
 }
 .tab-contents{
     display: none;
+}
+.tab-contents p{
+    padding: .3rem;
 }
 .tab-contents.active-tab{
     display: block;
@@ -275,18 +284,21 @@ form .btn2{
     display: block;
 }
 footer {
-    background-color: #333; /* Dark background for the footer */
-    color: #fff; /* Light text color for contrast */
-    text-align: center; /* Center the text */
-    padding: 20px 0; /* Some padding at the top and bottom */
-    font-size: 14px; /* Adjust the font size as needed */
+    background-color: #333;
+    color: #fff;
+    text-align: center; 
+    padding: 20px 0;
+    font-size: 14px; 
+    clear: both;
+    position: relative;
+    width: 100%;   
 }
 
 footer a {
-    color: #fff; /* Style for links to match the footer's color scheme */
-    text-decoration: none; /* Optional: removes underline from links */
+    color: #fff; 
+    text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Optional: adds underline on hover */
+    text-decoration: underline;
 }

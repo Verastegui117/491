@@ -124,7 +124,7 @@ def add_comment():
         data = request.form
 
         # Validate input data
-        if not data or 'content' not in data or 'username' not in data:
+        if not data or 'content' not in data:
             return jsonify({'message': 'Missing required fields'}), 400
 
         # Create a new comment instance
