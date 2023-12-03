@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Natural Remedies</title>
+    <link rel="stylesheet" href="static/forum.css"> <!-- Ensure the path to your CSS file is correct -->
+</head>
+<body>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Remedies</a>
+                        <div class="dropdown-content">
+                            <a href="/cold">Cold</a>
+                            <a href="/headache">Headache</a>
+                            <a href="/stomach">Stomach Ache</a>
+                            <a href="/lethargy">Lethargy</a>
+                        </div>
+                    </li>
+                    <li><a href="/comments">Discussion</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-text">
+                <h1><span>Welcome</span> to The Comment Section</h1>
+            </div>
+        </div>
+    
+
+    <main>
+        <div class="container">
+            <section id="forum">
+                <h1 class="forum-title">Welcome to Our Forum</h1>
+    
+                <div id="comments-section">
+                    <h2>Comments</h2>
+                    {% for comment in comments %}
+                        <div class="comment">
+                            <h3>{{ comment.username }} says:</h3>
+                            <p>{{ comment.content }}</p>
+                            <small>Posted on {{ comment.created_at }}</small>
+                        </div>
+                    {% endfor %}
+                </div>
+    
+                <!-- Comment Submission Form -->
+                <div id="comment-form-section">
+                    <h2>Leave a Comment</h2>
+                    <form action="/add-comment" method="post">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Comment:</label>
+                            <textarea id="content" name="content" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Submit Comment</button>
+                    </form>
+                </div>
+    
+            </section>
+        </div>
+    </main>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Natural Remedies. All rights reserved.</p>
+            <p>Contact us <a href="/contact">here</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>

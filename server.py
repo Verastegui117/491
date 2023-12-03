@@ -1,8 +1,24 @@
 from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 import requests
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+from config import db_name
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-ey' 
+
+app.config['SQLALCHEMY_DATABASE_URI'] = db_name
+
+db = SQLAlchemy()
+
+db.init_app(app)
+
+class Comments(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 
 @app.route('/', methods=['GET'])
@@ -64,9 +80,52 @@ def get_cold():
 @app.route('/lethargy', methods=['GET'])
 def get_lethargy():
     return render_template("lethargy.html")
+
 @app.route('/stomach', methods=['GET'])
 def get_stomach():
     return render_template("stomach.html")
+
+@app.route('/forum', methods=['GET'])
+def get_forum():
+    return render_template("forum.html")
+
+
+@app.route('/add-comment', methods=['POST'])
+def add_comment():
+    data = request.form
+
+    # Validate input data
+    if not data or 'content' not in data or 'username' not in data:
+        return jsonify({'message': 'Missing required fields'}), 400
+
+    # Create a new comment instance
+    new_comment = Comments(
+        username=data['username'],
+        content=data['content']
+    )
+    db.session.add(new_comment)
+    db.session.commit()
+
+    return redirect(url_for('get_comments'))
+
+@app.route('/comments')
+def get_comments():
+    # Query all comments from the database
+    comments = Comments.query.all()
+
+    # Convert the comments to a list of dictionaries to make them JSON serializable
+    comments_list = [
+        {
+            'id': comment.id,
+            'username': comment.username,
+            'content': comment.content,
+            'created_at': comment.created_at.strftime('%Y-%m-%d %H:%M:%S')
+        }
+        for comment in comments
+    ]
+
+    # Render an HTML template with comments data
+    return render_template('forum.html', comments=comments_list)
 
 
 if __name__ == '__main__':
