@@ -118,7 +118,7 @@ nav ul li a:hover::after {
     padding-bottom: .5rem;
 }
 .symptoms-backdrop {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black backdrop */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 15px;
     border-radius: 8px;
 }
