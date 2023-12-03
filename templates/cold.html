@@ -25,30 +25,15 @@
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="header-text">
-            <p>Fight the Cold Naturally</p>
-            <h1>Welcome to <span>Cold Remedies</span></h1>
-        </div>
-    </div>
-</div>
-
-<div id="cold-remedies">
-    <div class="container">
-        <div class="row">
-            <div class="remedies-col-1">
-                <img src="static/images/cold-remedy.jpg">
+        <div class="header-content">
+            <div class="header-text">
+                <p>Fight the Cold Naturally</p>
+                <h1>Welcome to <span>Cold Remedies</span></h1>
             </div>
-            <div class="remedies-col-2">
-                <h1 class="sub-title">Natural Solutions for Colds</h1>
-                <p>Colds are a common ailment, especially during seasonal changes. While over-the-counter medications can provide relief, they sometimes come with side effects. Fortunately, there are numerous natural remedies with long histories of use and recent scientific backing that can help combat colds and boost your immune system.</p>
-
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Symptoms')">Symptoms</p>
-                    <p class="tab-links" onclick="opentab('NaturalTreatments')">Natural Treatments</p>
-                </div>
-
-                <div class="tab-contents active-tab" id="Symptoms">
-                    <ul>
+            <div class="symptoms-container">
+                <div class="symptoms-backdrop"> <!-- Dark backdrop for text -->
+                    <h2>Common Cold Symptoms:</h2>
+                    <ul class="symptoms-list">
                         <li><span>Runny Nose:</span> Excess nasal mucus production, leading to a discharge.</li>
                         <li><span>Cough:</span> A reflex to clear the airways.</li>
                         <li><span>Sore Throat:</span> A raw or scratchy feeling in the throat.</li>
@@ -57,22 +42,69 @@
                         <li><span>Body Aches:</span> Generalized discomfort and pain in the body.</li>
                     </ul>
                 </div>
-
-                <div class="tab-contents" id="NaturalTreatments">
-                    <ul>
-                        <li><span>Honey and Lemon:</span> A classic remedy that can soothe a sore throat and act as a cough suppressant.</li>
-                        <li><span>Ginger Tea:</span> Helps in reducing inflammation and can be soothing for a sore throat.</li>
-                        <li><span>Chicken Soup:</span> Provides essential nutrients, helps in hydration, and has anti-inflammatory properties.</li>
-                        <li><span>Steam Inhalation:</span> Helps in relieving nasal congestion.</li>
-                        <li><span>Garlic:</span> Known for its antiviral properties and can boost the immune system.</li>
-                        <li><span>Echinacea:</span> Often used to fight infections, especially the common cold and other upper respiratory infections.</li>
-                    </ul>
-                </div>
-            
             </div>
         </div>
     </div>
 </div>
+
+<div id="country-remedies">
+    <div class="container">
+        <div class="row">
+            <div class="remedies-col">
+                <h1 class="sub-title">Remedies from Around the World</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Jamaica')">Jamaica</p>
+                    <p class="tab-links" onclick="opentab('Bolivia')">Bolivia</p>
+                    <p class="tab-links" onclick="opentab('Armenia')">Armenia</p>
+                    <p class="tab-links" onclick="opentab('Japan')">Japan</p>
+                    <p class="tab-links" onclick="opentab('India')">India</p>
+                </div>
+
+                <!-- Jamaica Section -->
+                <div class="tab-contents active-tab" id="Jamaica">
+                    <h2>Colds: Sorrel Tea</h2>
+                    <p><strong>Ingredients:</strong> Dried sorrel petals, hot water, ginger, cloves, sugar (optional)</p>
+                    <p><strong>Background:</strong> Sorrel tea, a popular Jamaican remedy for colds and flu, is rich in vitamin C. Steep dried sorrel petals with ginger and cloves, sweetened with sugar if desired.</p>
+                    <p><strong>History:</strong> The tradition of sorrel tea in Jamaica can be traced back to the island's colonial history, blending African herbal knowledge with Caribbean flavors.</p>
+                    <!-- Add more remedies for Jamaica here -->
+                </div>
+
+                <!-- Bolivia Section -->
+                <div class="tab-contents" id="Bolivia">
+                    <h2>Colds: Coca Leaf Tea</h2>
+                    <p><strong>Ingredients:</strong> Dried coca leaves, hot water</p>
+                    <p><strong>Background:</strong> Coca leaves are native to Bolivia and traditionally used to relieve cold symptoms and boost energy. Steep dried coca leaves in hot water for a soothing tea.</p>
+                    <p><strong>History:</strong> Coca leaves have a long history in Bolivia, dating back to the ancient civilizations of the Andes, including the Incas.</p>
+                    <!-- Add more remedies for Bolivia here -->
+                </div>
+
+                <div class="tab-contents" id="Armenia">
+                    <h2>Colds: Armenian Herbal Infusion</h2>
+                    <p><strong>Ingredients:</strong> Armenian herbal mix (mint, thyme, oregano), hot water, honey (optional)</p>
+                    <p><strong>Background:</strong> Herbal infusions using mint, thyme, and oregano are common in Armenia for combating colds, with optional honey for sweetness.</p>
+                    <p><strong>History:</strong> The use of herbs dates back to ancient Armenia, with a rich tradition of herbal remedies supported by the diverse flora of the region's mountainous terrain.</p>
+                
+                </div>
+                
+                <!-- Japan Section -->
+                <div class="tab-contents" id="Japan">
+                    <h2>Colds: Wasabi Nasal Steam</h2>
+                    <p><strong>Ingredients:</strong> Fresh wasabi paste, hot water</p>
+                    <p><strong>Background:</strong> Inhaling steam infused with wasabi paste is a traditional Japanese practice for relieving cold symptoms and clearing nasal passages.</p>
+                    <p><strong>History:</strong> Wasabi's use extends beyond cuisine in Japan, also valued for its potential medicinal properties.</p>
+                </div>
+                <div class="tab-contents" id="India">
+                    <h2>Colds: Turmeric Milk</h2>
+                    <p><strong>Ingredients:</strong> Turmeric powder, milk, honey</p>
+                    <p><strong>Background:</strong> Known as "Golden Milk," turmeric milk is an Ayurvedic remedy in India, used for its anti-inflammatory properties to treat cold symptoms.</p>
+                    <p><strong>History:</strong> Turmeric has been a part of Indian Ayurvedic practices for over 4,000 years, dating back to the Vedic period.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
@@ -88,6 +120,11 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
-
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Natural Remedies. All rights reserved.</p>
+        <p>Contact us <a href="/contact">Here</a></p>
+    </div>
+</footer>
 </body>
 </html>
