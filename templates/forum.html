@@ -22,7 +22,11 @@
                     </li>
                     <li><a href="/comments">Discussion</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/login">Login/Sign Up</a></li>
+                    {% if session.logged_in %}
+                        <li><a href="/logout">Logout</a></li>
+                    {% else %}
+                        <li><a href="/login">Login/Sign Up</a></li>
+                    {% endif %}
                 </ul>
             </nav>
             
