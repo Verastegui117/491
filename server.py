@@ -61,6 +61,9 @@ def get_heaadache():
 def get_cold():
     return render_template("cold.html")
 
+@app.route('/lethargy', methods=['GET'])
+def get_lethargy():
+    return render_template("lethargy.html")
 @app.route('/stomach', methods=['GET'])
 def get_stomach():
     return render_template("stomach.html")

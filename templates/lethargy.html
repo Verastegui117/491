@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lethargy Relief - Natural Remedies</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Remedies</a>
+                    <div class="dropdown-content">
+                        <a href="/cold">Cold</a>
+                        <a href="/headache">Headache</a>
+                        <a href="/stomach">Stomach Ache</a>
+                    </div>
+                </li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Boost Your Energy Naturally</p>
+            <h1>Welcome to <span>Lethargy Relief</span></h1>
+        </div>
+        <div class="symptoms-container">
+            <div class="symptoms-backdrop">
+                <h2>Common Signs of Lethargy:</h2>
+                <ul class="symptoms-list">
+                    <li><span>Constant Fatigue:</span> A persistent feeling of tiredness or lack of energy.</li>
+                    <li><span>Mental Exhaustion:</span> Difficulty in concentrating or staying focused.</li>
+                    <li><span>Muscle Weakness:</span> Reduced strength or endurance in muscles.</li>
+                    <li><span>Low Motivation:</span> Lack of enthusiasm or drive for activities.</li>
+                    <!-- Add more symptoms as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="country-remedies">
+    <div class="container">
+        <div class="row">
+            <div class="remedies-col">
+                <h1 class="sub-title">Remedies from Around the World</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Jamaica')">Jamaica</p>
+                    <p class="tab-links" onclick="opentab('Bolivia')">Bolivia</p>
+                    <p class="tab-links" onclick="opentab('Armenia')">Armenia</p>
+                    <p class="tab-links" onclick="opentab('Japan')">Japan</p>
+                    <p class="tab-links" onclick="opentab('India')">India</p>
+                </div>
+
+                <!-- Jamaica: Soursop (Graviola) Smoothie, Blue Mountain Coffee -->
+                <div class="tab-contents active-tab" id="Jamaica">
+                    <h2>Lethargy: Soursop (Graviola) Smoothie & Blue Mountain Coffee</h2>
+                    <p><strong>Ingredients:</strong> Soursop pulp, coconut milk, honey (optional); Jamaican Blue Mountain coffee beans, hot water.</p>
+                    <p><strong>Background:</strong> Soursop smoothies and Blue Mountain coffee are popular in Jamaica for their energy-boosting properties.</p>
+                    <p><strong>History:</strong> Both soursop and Blue Mountain coffee are integral to Jamaican culture, cherished for their taste and revitalizing qualities.</p>
+                </div>
+
+                <!-- Bolivia: Quinoa Energy Bars -->
+                <div class="tab-contents" id="Bolivia">
+                    <h2>Lethargy: Quinoa Energy Bars</h2>
+                    <p><strong>Ingredients:</strong> Quinoa, honey, nuts, dried fruits.</p>
+                    <p><strong>Background:</strong> Quinoa energy bars, made with nuts and dried fruits, are a staple in Bolivia for sustained energy.</p>
+                    <p><strong>History:</strong> Quinoa has been a vital part of Andean culture and cuisine, valued for its nutritional properties.</p>
+                </div>
+
+                <!-- Armenia: Armenian Herbal Tonic -->
+                <div class="tab-contents" id="Armenia">
+                    <h2>Lethargy: Armenian Herbal Tonic</h2>
+                    <p><strong>Ingredients:</strong> Various herbs like rosemary, thyme, sage, hot water, honey (optional).</p>
+                    <p><strong>Background:</strong> Herbal tonics in Armenia are used for their revitalizing effects, made from a blend of local herbs.</p>
+                    <p><strong>History:</strong> Armenia has a long history of using herbal remedies, with herbal tonics being a part of their traditional medicine.</p>
+                </div>
+
+                <!-- Japan: Matcha Green Tea -->
+                <div class="tab-contents" id="Japan">
+                    <h2>Lethargy: Matcha Green Tea</h2>
+                    <p><strong>Ingredients:</strong> Matcha green tea powder, hot water.</p>
+                    <p><strong>Background:</strong> Matcha green tea is a traditional Japanese beverage, known for its energy-boosting properties.</p>
+                    <p><strong>History:</strong> The history of Matcha in Japan is deeply intertwined with the practice of the tea ceremony, reflecting mindfulness and tranquility.</p>
+                </div>
+
+                <!-- India: Ashwagandha Tea -->
+                <div class="tab-contents" id="India">
+                    <h2>Lethargy: Ashwagandha Tea</h2>
+                    <p><strong>Ingredients:</strong> Ashwagandha root or powder, hot water.</p>
+                    <p><strong>Background:</strong> Ashwagandha tea is used in Ayurveda for its adaptogenic properties, believed to combat lethargy.</p>
+                    <p><strong>History:</strong> Ashwagandha has been a part of Indian Ayurvedic practices for thousands of years, valued for its health benefits.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Natural Remedies. All rights reserved.</p>
+        <p>Contact us <a href="/contact">Here</a></p>
+    </div>
+</footer>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(let tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
