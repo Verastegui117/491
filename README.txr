@@ -15,7 +15,8 @@ depreciated. You would recieve an error stating  If this occurs you can try thes
 
 pip install PyMySQL 
 
-then add this statement to line 8 in server.py        pymysql.install_as_MySQLdb()
+then add this statement to line 8 in server.py        
+pymysql.install_as_MySQLdb()
 
 Once you have all the dependencies working simply type
 
