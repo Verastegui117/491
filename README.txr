@@ -1,0 +1,25 @@
+To run our application the user must have python3 installed. The user must download our project and save the files
+to a directory in their computer. Once in the directory this project is stored in (491) the user must install
+all of the dependencies we use. Using pip the installation would be as follows. 
+
+pip install flask
+pip install requests
+pip install datetime
+pip install pyjwt
+pip install mysqlclient
+pip install Flask-SQLAlchemy
+pip install SQLAlchemy
+
+note* the last dependencies listed can be tricky. Depending on your operating system the dependency you need may be
+depreciated. You would recieve an error stating  If this occurs you can try these fixes
+
+pip install PyMySQL 
+
+then add this statement to line 8 in server.py        pymysql.install_as_MySQLdb()
+
+Once you have all the dependencies working simply type
+
+python3 server.py in your terminal
+
+then navigate to http://localhost:5000 and enhoy our website.
+

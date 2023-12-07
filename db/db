@@ -1,22 +1,18 @@
--- Create Database
 CREATE DATABASE IF NOT EXISTS comment_section_db;
 USE comment_section_db;
 
--- Create Comments Table
+
 CREATE TABLE IF NOT EXISTS comments (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,  -- Added username field
+    username VARCHAR(255) NOT NULL, 
     content TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Optionally, add a Foreign Key Constraint if there is a Users Table
--- ALTER TABLE comments ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id);
 USE comment_section_db;
 
 INSERT INTO comments (user_id, username, content) VALUES
 ('user1', 'This is the first sample comment.'),
 ('user2', 'Here is another sample comment.');
 
--- Add more comments as needed

@@ -5,6 +5,8 @@ from datetime import datetime
 from config import db_name
 import jwt
 
+
+
 def getemail_from_token(token):
     try:
      
@@ -15,11 +17,11 @@ def getemail_from_token(token):
         return email
 
     except jwt.DecodeError:
-        # Handle invalid token
+
         return "Invalid Token", None
 
     except jwt.ExpiredSignatureError:
-        # Handle expired token
+
         return "Token Expired", None
 
 app = Flask(__name__)
@@ -121,11 +123,9 @@ def add_comment():
     else:
         data = request.form
 
-        # Validate input data
         if not data or 'content' not in data:
             return jsonify({'message': 'Missing required fields'}), 400
 
-        # Create a new comment instance
         new_comment = Comments(
             username=session['email'],
             content=data['content']
@@ -153,4 +153,4 @@ def get_comments():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
